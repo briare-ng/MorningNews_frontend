@@ -1,0 +1,55 @@
+.articles {
+  width: 400px;
+  height: 450px;
+  margin: 15px 10px;
+  padding: 25px 5px;
+  border-radius: 3px;
+  box-shadow: 5px 5px 10px rgba(211, 211, 211, 0.218),
+    -5px -5px 10px rgba(211, 211, 211, 0.218),
+    5px -5px 10px rgba(211, 211, 211, 0.218),
+    -5px 5px 10px rgba(211, 211, 211, 0.218);
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(233, 190, 89);
+  margin: 5px 0px 15px 0px;
+}
+
+.articleHeader {
+  display: flex;
+  justify-content: space-between;
+  height: 55px;
+}
+
+.articleInfos {
+  display: flex;
+  justify-content: space-between;
+}
+.source {
+  font-weight: bold;
+}
+.bookmarkIcon {
+  cursor: pointer;
+  margin-left: 4px;
+}
+.bookmarkIcon:hover {
+  /* opacity: 0.6; */
+  color: rgba(233, 190, 89);
+}
+
+.eyeIcon {
+  cursor: pointer;
+  margin-left: 5px;
+}
+.eyeIcon:hover {
+  /* opacity: 0.6; */
+  color: rgba(233, 190, 89);
+}
+.description {
+  color: black;
+}
+.description:hover {
+  color: rgb(2, 51, 100);
+}
