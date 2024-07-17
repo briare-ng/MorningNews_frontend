@@ -29,7 +29,7 @@ function Header() {
   const handleRegister = (e) => {
     e.preventDefault();
     // fetch("http://localhost:3000/users/signup", {
-    fetch("https//morning-news-backend-five.vercel.app/signup", {
+    fetch("https://morning-news-backend-five.vercel.app/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -51,7 +51,7 @@ function Header() {
   const handleConnection = (e) => {
     e.preventDefault();
     // fetch("http://localhost:3000/users/signin", {
-    fetch("https//morning-news-backend-five.vercel.app/users/signin", {
+    fetch("https://morning-news-backend-five.vercel.app/users/signin", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
