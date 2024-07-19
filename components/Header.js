@@ -96,14 +96,16 @@ function Header() {
           onSubmit={(e) => handleRegister(e)}
         >
           <p>Sign-up</p>
-          <input className={styles.input}
+          <input
+            className={styles.input}
             type="text"
             placeholder="Username"
             id="signUpUsername"
             onChange={(e) => setSignUpUsername(e.target.value)}
             value={signUpUsername}
           />
-          <input className={styles.input}
+          <input
+            className={styles.input}
             type="password"
             placeholder="Password"
             id="signUpPassword"
@@ -119,14 +121,16 @@ function Header() {
           onSubmit={(e) => handleConnection(e)}
         >
           <p>Sign-in</p>
-          <input className={styles.input}
+          <input
+            className={styles.input}
             type="text"
             placeholder="Username"
             id="signInUsername"
             onChange={(e) => setSignInUsername(e.target.value)}
             value={signInUsername}
           />
-          <input className={styles.input}
+          <input
+            className={styles.input}
             type="password"
             placeholder="Password"
             id="signInPassword"
@@ -145,36 +149,33 @@ function Header() {
   if (user.token) {
     userSection = (
       <div className={styles.logoutSection}>
-        <p>Welcome {user.username} / </p>
+        <span>Welcome</span>
+        <span className={styles.user}>&nbsp;{user.username}</span>
         <button onClick={() => handleLogout()}>Logout</button>
       </div>
     );
   } else {
-    if (isModalVisible) {
-      userSection = (
-        <FontAwesomeIcon
-          icon={faXmark}
-          onClick={() => showModal()}
-          className={styles.userSection}
-        />
-      );
-    } else {
-      userSection = (
-        <>
-          <Tooltip
-            title="Sign In or Sign Up"
-            color="#f2b936"
-            placement="bottom"
-          >
-            <FontAwesomeIcon
-              icon={faUser}
-              onClick={() => showModal()}
-              className={styles.userSection}
-            />
-          </Tooltip>
-        </>
-      );
-    }
+    // if (isModalVisible) {
+    //   userSection = (
+    //     <FontAwesomeIcon
+    //       icon={faXmark}
+    //       onClick={() => showModal()}
+    //       className={styles.userSection}
+    //     />
+    //   );
+    // } else {
+    userSection = (
+      <>
+        <Tooltip title="Sign In or Sign Up" color="#f2b936" placement="bottom">
+          <FontAwesomeIcon
+            icon={faUser}
+            onClick={() => showModal()}
+            className={styles.userSection}
+          />
+        </Tooltip>
+      </>
+    );
+    // }
   }
 
   return (

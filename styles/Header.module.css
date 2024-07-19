@@ -38,17 +38,6 @@
   letter-spacing: 1px;
 }
 
-.userSection {
-  font-size: 22px;
-  width: 12vw;
-  cursor: pointer;
-}
-
-.userSection:hover {
-  /* opacity: 0.8; */
-  color: rgba(233, 190, 89);
-}
-
 .date {
   width: 12vw;
   text-align: center;
@@ -97,7 +86,20 @@
   justify-content: center;
   flex-direction: column;
 }
+.userSection {
+  font-size: 22px;
+  width: 12vw;
+  cursor: pointer;
+}
 
+.userSection:hover {
+  /* opacity: 0.8; */
+  color: rgba(233, 190, 89);
+}
+.user {
+  font-weight: 800;
+  font-size: 1.2em;
+}
 .logoutSection {
   display: flex;
   align-items: center;
@@ -112,6 +114,20 @@
   /* opacity: 0.6; */
   color: rgba(233, 190, 89);
 }
-.ant-modal {
-  max-width: 50vw;
+@media (max-width: 576px) {
+  .eyeIcon {
+    margin: 0 20px 0 0;
+  }
+  .logoContainer {
+    padding: 0;
+  }
+  .logoutSection {
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 10px;
+  }
+  .headerRight {
+    text-align: end;
+    align-items: flex-end;
+  }
 }
