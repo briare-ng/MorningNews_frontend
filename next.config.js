@@ -11,6 +11,7 @@ const nextConfig = {
       "media.wired.com",
       "s.yimg.com",
       "img-cdn.tnwcdn.com",
+      "s.aolcdn.com",
     ],
   },
 };

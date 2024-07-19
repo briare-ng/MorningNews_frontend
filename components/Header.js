@@ -83,6 +83,9 @@ function Header() {
   const showModal = () => {
     setIsModalVisible(!isModalVisible);
   };
+  const handleCloseModal = () => {
+    setIsModalVisible(false);
+  };
 
   let modalContent;
   if (!user.token) {
@@ -206,7 +209,8 @@ function Header() {
             getContainer="#react-modals"
             className={styles.modal}
             open={isModalVisible}
-            closable={false}
+            closable={true}
+            onCancel={handleCloseModal}
             footer={null}
           >
             {modalContent}
