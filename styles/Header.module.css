@@ -76,7 +76,13 @@
   justify-content: center;
   align-items: center;
 }
-
+.forms {
+  display: flex;
+  justify-content: center;
+}
+.input {
+  max-width: 20vw;
+}
 .registerSection {
   width: 250px;
   margin: 10px;

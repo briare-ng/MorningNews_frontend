@@ -90,20 +90,20 @@ function Header() {
   let modalContent;
   if (!user.token) {
     modalContent = (
-      <div>
+      <div className={styles.forms}>
         <form
           className={styles.registerSection}
           onSubmit={(e) => handleRegister(e)}
         >
           <p>Sign-up</p>
-          <input
+          <input className={styles.input}
             type="text"
             placeholder="Username"
             id="signUpUsername"
             onChange={(e) => setSignUpUsername(e.target.value)}
             value={signUpUsername}
           />
-          <input
+          <input className={styles.input}
             type="password"
             placeholder="Password"
             id="signUpPassword"
@@ -119,14 +119,14 @@ function Header() {
           onSubmit={(e) => handleConnection(e)}
         >
           <p>Sign-in</p>
-          <input
+          <input className={styles.input}
             type="text"
             placeholder="Username"
             id="signInUsername"
             onChange={(e) => setSignInUsername(e.target.value)}
             value={signInUsername}
           />
-          <input
+          <input className={styles.input}
             type="password"
             placeholder="Password"
             id="signInPassword"
