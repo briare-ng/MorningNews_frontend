@@ -90,7 +90,7 @@ function Header() {
   let modalContent;
   if (!user.token) {
     modalContent = (
-      <div className={styles.registerContainer}>
+      <div>
         <form
           className={styles.registerSection}
           onSubmit={(e) => handleRegister(e)}
@@ -204,10 +204,9 @@ function Header() {
       </div>
 
       {isModalVisible && (
-        <div id="react-modals">
+        <div id="react-modals" className={styles.registerContainer}>
           <Modal
             getContainer="#react-modals"
-            className={styles.modal}
             open={isModalVisible}
             closable={true}
             onCancel={handleCloseModal}
